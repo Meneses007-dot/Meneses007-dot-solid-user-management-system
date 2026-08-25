@@ -19,6 +19,18 @@ public class UserService {
     }
 
     public void registerUser(String login, String fullName, String plainPassword, Role role) {
+        if (login == null || login.isBlank()) {
+            throw new IllegalArgumentException("El login es obligatorio.");
+        }
+        if (fullName == null || fullName.isBlank()) {
+            throw new IllegalArgumentException("El nombre completo es obligatorio.");
+        }
+        if (role == null) {
+            throw new IllegalArgumentException("Debe seleccionar un rol.");
+        }
+        if (plainPassword == null || plainPassword.isEmpty()) {
+            throw new IllegalArgumentException("La contraseña es obligatoria.");
+        }
         if (!isValidPassword(plainPassword)) {
             throw new IllegalArgumentException("La contraseña debe tener mín 6 caracteres, un dígito, una mayúscula y un carácter especial.");
         }

@@ -35,6 +35,34 @@ class UserServiceTest {
     }
 
     @Test
+    void testRegisterUser_EmptyLogin() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () ->
+            userService.registerUser("  ", "User", "Pass123!", Role.ESTUDIANTE));
+        assertTrue(exception.getMessage().contains("login es obligatorio"));
+    }
+
+    @Test
+    void testRegisterUser_EmptyFullName() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () ->
+            userService.registerUser("user1", "", "Pass123!", Role.ESTUDIANTE));
+        assertTrue(exception.getMessage().contains("nombre completo es obligatorio"));
+    }
+
+    @Test
+    void testRegisterUser_NullRole() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () ->
+            userService.registerUser("user1", "User", "Pass123!", null));
+        assertTrue(exception.getMessage().contains("rol"));
+    }
+
+    @Test
+    void testRegisterUser_EmptyPassword() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () ->
+            userService.registerUser("user1", "User", "", Role.ESTUDIANTE));
+        assertTrue(exception.getMessage().contains("contraseña es obligatoria"));
+    }
+
+    @Test
     void testRegisterUser_InvalidPassword() {
         // Falta mayúscula y carácter especial
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
