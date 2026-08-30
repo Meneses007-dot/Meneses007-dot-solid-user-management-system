@@ -3,8 +3,8 @@ package com.unicauca.usersystem.domain.service;
 import com.unicauca.usersystem.domain.Role;
 import com.unicauca.usersystem.domain.User;
 import com.unicauca.usersystem.domain.UserStatus;
-import com.unicauca.usersystem.domain.access.PasswordHasher;
-import com.unicauca.usersystem.domain.access.UserRepository;
+import com.unicauca.usersystem.domain.access.IPasswordHasher;
+import com.unicauca.usersystem.domain.access.IUserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -13,14 +13,14 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class UserServiceTest {
-    private UserRepository mockRepo;
-    private PasswordHasher mockHasher;
+    private IUserRepository mockRepo;
+    private IPasswordHasher mockHasher;
     private UserService userService;
 
     @BeforeEach
     void setUp() {
-        mockRepo = Mockito.mock(UserRepository.class);
-        mockHasher = Mockito.mock(PasswordHasher.class);
+        mockRepo = Mockito.mock(IUserRepository.class);
+        mockHasher = Mockito.mock(IPasswordHasher.class);
         userService = new UserService(mockRepo, mockHasher);
     }
 

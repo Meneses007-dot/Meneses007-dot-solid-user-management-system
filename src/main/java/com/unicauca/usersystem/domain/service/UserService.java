@@ -3,17 +3,17 @@ package com.unicauca.usersystem.domain.service;
 import com.unicauca.usersystem.domain.Role;
 import com.unicauca.usersystem.domain.User;
 import com.unicauca.usersystem.domain.UserStatus;
-import com.unicauca.usersystem.domain.access.PasswordHasher;
-import com.unicauca.usersystem.domain.access.UserRepository;
+import com.unicauca.usersystem.domain.access.IPasswordHasher;
+import com.unicauca.usersystem.domain.access.IUserRepository;
 
 import java.util.Optional;
 import java.util.regex.Pattern;
 
 public class UserService {
-    private final UserRepository userRepository;
-    private final PasswordHasher passwordHasher;
+    private final IUserRepository userRepository;
+    private final IPasswordHasher passwordHasher;
 
-    public UserService(UserRepository userRepository, PasswordHasher passwordHasher) {
+    public UserService(IUserRepository userRepository, IPasswordHasher passwordHasher) {
         this.userRepository = userRepository;
         this.passwordHasher = passwordHasher;
     }

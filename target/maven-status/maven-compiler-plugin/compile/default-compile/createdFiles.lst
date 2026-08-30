@@ -1,13 +1,13 @@
 com/unicauca/usersystem/domain/access/Argon2Hasher.class
-com/unicauca/usersystem/domain/access/UserRepository.class
+com/unicauca/usersystem/domain/access/IPasswordHasher.class
 com/unicauca/usersystem/domain/main/Main.class
 com/unicauca/usersystem/domain/main/DashboardView.class
-com/unicauca/usersystem/domain/UserStatus.class
-com/unicauca/usersystem/domain/access/PasswordHasher.class
 com/unicauca/usersystem/domain/access/SQLiteUserRepository.class
+com/unicauca/usersystem/domain/UserStatus.class
 com/unicauca/usersystem/domain/main/RegisterView.class
 com/unicauca/usersystem/domain/service/UserService.class
 com/unicauca/usersystem/domain/main/LoginView.class
 com/unicauca/usersystem/domain/main/DashboardView$1.class
 com/unicauca/usersystem/domain/User.class
 com/unicauca/usersystem/domain/Role.class
+com/unicauca/usersystem/domain/access/IUserRepository.class

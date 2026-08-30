@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Optional;
 
-public class SQLiteUserRepository implements UserRepository {
+public class SQLiteUserRepository implements IUserRepository {
 
     private final String jdbcUrl;
 

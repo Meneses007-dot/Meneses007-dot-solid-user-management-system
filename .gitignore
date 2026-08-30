@@ -1,0 +1,22 @@
+# Build output
+target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.vscode
+.settings/
+.classpath
+.project
+
+# OS
+.DS_Store
+Thumbs.db
+
+# SQLite database (contains user data and hashed passwords)
+users.db
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3

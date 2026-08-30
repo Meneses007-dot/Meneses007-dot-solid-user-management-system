@@ -3,7 +3,7 @@ package com.unicauca.usersystem.domain.access;
 import de.mkammerer.argon2.Argon2;
 import de.mkammerer.argon2.Argon2Factory;
 
-public class Argon2Hasher implements PasswordHasher {
+public class Argon2Hasher implements IPasswordHasher {
     private final Argon2 argon2 = Argon2Factory.create(Argon2Factory.Argon2Types.ARGON2id);
 
     @Override
