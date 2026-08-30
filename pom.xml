@@ -60,7 +60,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>com.unicauca.usersystem.ui.Main</mainClass>
+                    <mainClass>com.unicauca.usersystem.domain.main.Main</mainClass>
                 </configuration>
             </plugin>
             
